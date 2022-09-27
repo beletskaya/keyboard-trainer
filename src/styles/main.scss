@@ -141,6 +141,10 @@ body.dark {
         padding: 5px;
         text-align: center;
         border-radius: 5px;
+        @media (max-width: 385px) {
+          line-height: 36px;
+          font-size: 10px;
+        }
 
         &.hint {
           background: #c7d0d4;

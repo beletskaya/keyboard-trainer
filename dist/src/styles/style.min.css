@@ -104,6 +104,10 @@ body.dark {
     padding: 5px;
     text-align: center;
     border-radius: 5px; }
+    @media (max-width: 385px) {
+      .container-wrapper .keyboard .line div {
+        line-height: 36px;
+        font-size: 10px; } }
     .container-wrapper .keyboard .line div.hint {
       background: #c7d0d4; }
   .container-wrapper .keyboard .line .backspace {
@@ -173,6 +177,11 @@ body.dark {
     background-repeat: no-repeat;
     width: 200px;
     height: 29px; }
+    @media (max-width: 390px) {
+      .navbar-custom .navbar__logo {
+        width: 125px;
+        background-size: contain;
+        background-position: center; } }
   .navbar-custom .navbar-nav-custom .nav-link {
     opacity: 0.64; }
   .navbar-custom .nav-link {
