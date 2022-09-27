@@ -8,7 +8,7 @@ function findCoord(isCorrect = true) {
             birdBlock.style.top = clientRect.top + "px";
             if (!isCorrect) {
                 birdBlock.style.left = 15 + "%";
-                birdBlock.style.top = 36 + "%";
+                birdBlock.style.top = 280 + "px";
             }
         }
     })

@@ -6,21 +6,24 @@ function viewUpdate() {
     done.classList.add('done')
     done.textContent = string.slice(0, exercise.currentPrintedIndex)
     textExample.innerHTML = ''
-    textExample.append(done,
-        ...string
-            .slice(exercise.currentPrintedIndex)
-            .split("")
-            .map((letter) => {
-                if(exercise.error.includes(letter)) {
-                    const errorSpan = document.createElement('span')
-                    errorSpan.classList.add('hint')
-                    errorSpan.textContent = letter
-                    return errorSpan
-                } else {
-                    exercise.error = []
-                }
-                return letter
-            }))
+    let arr = []
+    let str = [...string
+        .slice(exercise.currentPrintedIndex)
+        .split("")
+        .map((letter) => {
+            if(exercise.error.includes(letter)) {
+                const errorSpan = document.createElement('span')
+                errorSpan.classList.add('hint')
+                errorSpan.textContent = letter
+                done.appendChild(errorSpan)
+                return errorSpan
+            } else {
+                exercise.error = []
+            }
+            arr.push(letter)
+        })]
+
+    textExample.append(done,arr.join(''))
 
     inputField.value = string.slice(0, exercise.currentPrintedIndex)
     if(exercise.text.length === exercise.currentPrintedIndex) {
@@ -30,7 +33,7 @@ function viewUpdate() {
         document.querySelector('.indicators').classList.add('done')
         const birdBlock = document.querySelector('.keyboard__bird')
         birdBlock.style.left = 15 + "%";
-        birdBlock.style.top = 36 + "%";
+        birdBlock.style.top = 280 + "px";
     }
 }
 export default viewUpdate

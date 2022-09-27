@@ -13,12 +13,6 @@
     background-repeat: no-repeat;
     width: 200px;
     height: 29px;
-    
-    @media (max-width: 390px) {
-      width: 157px;
-      background-size: contain;
-      background-position: center;
-    }
   }
 
   .navbar-nav-custom {
