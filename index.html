@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Keyboard trainee</title>
+    <link rel="shortcut icon" href="src/images/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+	<link href="dist/src/styles/style.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="navbar__logo"></span>
+            </a>
+            <div class="d-flex">
+                <ul class="navbar-nav navbar-toggler d-flex justify-content-between flex-row align-items-center nav-icons-mob hidden-desk">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link restartLink"><img src="src/images/restart-icon.svg" alt="icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="switchTheme">
+                            <img class="darkIcon" src="src/images/dark-theme-icon.svg" alt="icon">
+                            <img class="lightIcon" style="display: none"
+                                 src="src/images/light-theme-icon.svg" alt="icon">
+                        </a>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="logo-tab hidden-desk d-flex justify-content-between">
+						<span>
+							<img src="src/images/logo-dark.svg" alt="logo">
+						</span>
+                    <span class="closeMenu navbar-collapse__close">
+							<img src="src/images/close-icon.svg" alt="icon">
+						</span>
+                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-custom">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Тест</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Тренажер</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Навчання</a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-mob">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Більше
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Для вчителів</a></li>
+                            <li><a class="dropdown-item" href="#">Про нас</a></li>
+                            <li><a class="dropdown-item" href="#">Допомога</a></li>
+                            <li><a class="dropdown-item" href="#">Контакти</a></li>
+                            <li><a class="dropdown-item" href="#">Підтримати проєкт</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex right-menu right-menu-tab">
+                    <ul class="navbar-nav">
+                        <li class="nav-item hidden-tab">
+                            <a href="#" class="nav-link restartLink">
+                                <img src="src/images/restart-icon.svg" alt="icon">
+                            </a>
+                        </li>
+                        <li class="nav-item hidden-tab">
+                            <a href="#" class="nav-link switchTheme">
+                                <img class="darkIcon" src="src/images/dark-theme-icon.svg" alt="icon">
+                                <img class="lightIcon" style="display: none"
+                                     src="src/images/light-theme-icon.svg" alt="icon">
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link avatar">
+                                <img src="src/images/avatar-icon.svg" alt="icon">
+                                <span class="nav-item__avatar-info d-flex flex-column">
+										<span class="nav-item__avatar-info__name">Alex</span>
+										<span class="nav-item__avatar-info__money">35 543</span>
+									</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container container-wrapper">
+    <div class="results">
+        <div class="results-title d-flex">Results:</div>
+        <div class="indicators d-flex justify-content-between">
+            <div class="indicator d-flex">
+                <div class="indicator__name">Words in a minute:</div>
+                <div class="indicator__value" id="counterWords">-</div>
+            </div>
+            <div class="indicator d-flex">
+                <div class="indicator__name">Mistakes:</div>
+                <div class="indicator__value" id="errorPercent">0%</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="devider"></div>
+<div class=" container container-wrapper container-keyboard">
+    <div class="keyboard__bird"></div>
+    <form action="" class="form-wrapper">
+        <input
+                id="input"
+                type="text"
+                class="input unselectable"
+                placeholder="Enter text"
+                value=""
+        />
+    </form>
+    <div class="text" id="textExample">
+        <div class="line d-flex"></div>
+    </div>
+    <div class="keyboard">
+        <div class="line d-flex">
+            <div data-letters="`">`</div>
+            <div data-letters="1">1</div>
+            <div data-letters="2">2</div>
+            <div data-letters="3">3</div>
+            <div data-letters="4">4</div>
+            <div data-letters="5">5</div>
+            <div data-letters="6">6</div>
+            <div data-letters="7">7</div>
+            <div data-letters="8">8</div>
+            <div data-letters="9">9</div>
+            <div data-letters="0">0</div>
+            <div data-letters="-">-</div>
+            <div>+</div>
+            <div class="backspace" id="letter_backspace" data-spec="Backspace">Backspace</div>
+        </div>
+        <div class="line d-flex">
+            <div class="tab" id="letter_tab" data-spec="Tab">Tab</div>
+            <div data-letters="Qq">Q</div>
+            <div data-letters="Ww">W</div>
+            <div data-letters="Ee">E</div>
+            <div data-letters="Rr">R</div>
+            <div data-letters="Tt">T</div>
+            <div data-letters="Yy">Y</div>
+            <div data-letters="Uu">U</div>
+            <div data-letters="Ii">I</div>
+            <div data-letters="Oo">O</div>
+            <div data-letters="Pp">P</div>
+            <div data-letters="[">[</div>
+            <div data-letters="]">]</div>
+            <div id="letter_slash_back" data-letters="\">\</div>
+        </div>
+        <div class="line d-flex">
+            <div class="caps" id="letter_capslock" data-spec="CapsLock">Caps Lock</div>
+            <div data-letters="Aa">A</div>
+            <div data-letters="Ss">S</div>
+            <div data-letters="Dd">D</div>
+            <div data-letters="Ff">F</div>
+            <div data-letters="Gg">G</div>
+            <div data-letters="Hh">H</div>
+            <div data-letters="Jj">J</div>
+            <div data-letters="Kk">K</div>
+            <div data-letters="Ll">L</div>
+            <div data-letters=";">;</div>
+            <div data-letters="'">'</div>
+            <div class="enter" id="letter_enter" data-spec="Enter">Enter</div>
+        </div>
+        <div class="line d-flex">
+            <div class="shift" data-spec="Shift">Shift</div>
+            <div data-letters="Zz">Z</div>
+            <div data-letters="Xx">X</div>
+            <div data-letters="Cc">C</div>
+            <div data-letters="Vv">V</div>
+            <div data-letters="Bb">B</div>
+            <div data-letters="Nn">N</div>
+            <div data-letters="Mm">M</div>
+            <div data-letters=",">,</div>
+            <div data-letters=".">.</div>
+            <div data-letters="/">/</div>
+            <div class="shift" data-spec="Shift">Shift</div>
+        </div>
+        <div class="line d-flex">
+            <div class="space" id="letter_space" data-spec="Space"></div>
+            <div class="alt" id="letter_alt" data-spec="Alt">Alt</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="dist/main.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+@import "colors";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $white;
+}
+body.dark {
+  background-color: $prussian-blue;
+
+  .container-keyboard {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #245a91;
+  }
+}
+.hidden-desk {
+  @media (min-width:992px) {
+    display: none!important;
+  }
+}
+.hidden-tab {
+  @media (max-width:992px) {
+    display: none;
+  }
+}
+.container-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .devider {
+    border-top: 1px solid #eee;
+    padding-bottom: 30px;
+  }
+
+  .results {
+    margin-top: 40px;
+    &-title {
+      font-size: 27px;
+      margin-bottom: 15px;
+      color: #5c8dcb;
+    }
+    .indicators {
+      border-radius: 8px;
+      border: 1px solid #d9d9d9;
+      margin-bottom: 65px;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      &.done {
+        box-shadow: #0000004d 0px 19px 38px, #00000038 0px 15px 12px;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .indicator {
+        font-size: 16px;
+        border-right: 1px solid #d9d9d9;
+        padding: 10px;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &__icon {
+          margin-right: 20px;
+          color: #0070ff;
+          &--errors {
+            color: #e50909;
+          }
+        }
+        &__value {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: 3px solid transparent;
+    border-bottom: 1px dotted #000;
+    outline: none;
+    font-size: 18px;
+    transition: all 0.1s ease-in;
+
+    .blur {
+      border: 3px solid black;
+    }
+    .error {
+      background-color: #fff000;
+    }
+  }
+
+  .text {
+    font-size: 18px;
+    margin-bottom: 35px;
+
+    .line {
+      height: 1.5em;
+      margin-bottom: 1px;
+    }
+    .done {
+      color: #d9d9d9;
+    }
+    .hint {
+      background-color: #ff3d00;
+    }
+    .error {
+      color: #ff0000;
+    }
+  }
+  .keyboard {
+    .line {
+      div {
+        width: 49px;
+        height: 49px;
+        line-height: 42px;
+        font-size: 15px;
+        border: 1px solid #c7d0d4;
+        background: #fff;
+        margin: 1px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 5px;
+
+        &.hint {
+          background: #c7d0d4;
+        }
+      }
+      .backspace {
+        width: 75px;
+        text-align: right;
+        color: #ddd;
+        font-size: 10px;
+      }
+
+      .tab {
+        width: 75px;
+        text-align: left;
+        color: #95a0a4;
+        font-size: 10px;
+      }
+
+      .caps {
+        width: 87px;
+        text-align: left;
+        color: #95a0a4;
+        font-size: 10px;
+      }
+      .enter {
+        width: 88px;
+        text-align: right;
+        color: #95a0a4;
+        font-size: 10px;
+      }
+      .shift {
+        width: 113px;
+        text-align: left;
+        color: #95a0a4;
+        font-size: 10px;
+        &:last-child {
+          text-align: right;
+        }
+      }
+      .space {
+        margin-left: auto;
+        width: 312px;
+        text-align: right;
+        color: #95a0a4;
+        font-size: 10px;
+      }
+      .alt {
+        width: 88px;
+        text-align: right;
+        color: #95a0a4;
+        font-size: 10px;
+        margin-right: auto;
+      }
+    }
+  }
+  .keyboard__bird {
+    position: absolute;
+    background-image: url("../images/bird.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(0, 0);
+    width: 60px;
+    height: 60px;
+    top: 36%;
+    left: 15%;
+    transition: top 1s ease 0s, left 1s ease 0s;
+  }
+}
+.container-keyboard {
+  margin-top: 100px;
+}
+.pressed {
+  background-color: #c4c4c4 !important;
+}
+
+@import "menu";
