@@ -196,7 +196,7 @@ body.dark {
     .navbar-custom .navbar-collapse .nav-item__avatar-info {
       display: none !important; } }
   @media (max-width: 992px) {
-    .navbar-custom .navbar-collapse.show {
+    .navbar-custom .navbar-collapse.show, .navbar-custom .navbar-collapse.collapsing {
       width: 100%;
       background-color: #00ACFF;
       position: absolute;
@@ -205,7 +205,7 @@ body.dark {
       left: 0;
       padding: 40px;
       z-index: 1; }
-      .navbar-custom .navbar-collapse.show .nav-link {
+      .navbar-custom .navbar-collapse.show .nav-link, .navbar-custom .navbar-collapse.collapsing .nav-link {
         padding: 16px 0;
         color: #FFFFFF;
         opacity: 1;
@@ -213,32 +213,32 @@ body.dark {
         font-size: 24px;
         line-height: 32px;
         border-bottom: 2px solid #ffffff20; }
-      .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-item:focus, .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-item:hover {
+      .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-item:focus, .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-item:hover, .navbar-custom .navbar-collapse.collapsing .dropdown-mob .dropdown-item:focus, .navbar-custom .navbar-collapse.collapsing .dropdown-mob .dropdown-item:hover {
         background-color: #f3f5f700; }
-      .navbar-custom .navbar-collapse.show .dropdown-mob .nav-link.dropdown-toggle {
+      .navbar-custom .navbar-collapse.show .dropdown-mob .nav-link.dropdown-toggle, .navbar-custom .navbar-collapse.collapsing .dropdown-mob .nav-link.dropdown-toggle {
         display: none !important; }
-      .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-menu {
+      .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-menu, .navbar-custom .navbar-collapse.collapsing .dropdown-mob .dropdown-menu {
         display: block;
         background-color: #faebd700;
         border: 0; }
-        .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-menu .dropdown-item {
+        .navbar-custom .navbar-collapse.show .dropdown-mob .dropdown-menu .dropdown-item, .navbar-custom .navbar-collapse.collapsing .dropdown-mob .dropdown-menu .dropdown-item {
           padding: 15px 0;
           font-weight: 500;
           font-size: 16px;
           line-height: 24px;
           color: #FFFFFF;
           opacity: 1; }
-      .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav {
+      .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav, .navbar-custom .navbar-collapse.collapsing .right-menu-tab .navbar-nav {
         width: fit-content; }
-        .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar {
+        .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar, .navbar-custom .navbar-collapse.collapsing .right-menu-tab .navbar-nav .nav-link.avatar {
           display: flex;
           border: 0; }
-          .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info {
+          .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info, .navbar-custom .navbar-collapse.collapsing .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info {
             margin-left: 25px; }
-            .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info__money {
+            .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info__money, .navbar-custom .navbar-collapse.collapsing .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info__money {
               position: relative;
               margin-left: 20px; }
-              .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info__money::before {
+              .navbar-custom .navbar-collapse.show .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info__money::before, .navbar-custom .navbar-collapse.collapsing .right-menu-tab .navbar-nav .nav-link.avatar .nav-item__avatar-info__money::before {
                 position: absolute;
                 content: '';
                 background-image: url("../images/coin.svg");

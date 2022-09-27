@@ -71,7 +71,7 @@
       }
     }
 
-    &.show {
+    &.show, &.collapsing {
       @media (max-width: 992px) {
         width: 100%;
         background-color: #00ACFF;
